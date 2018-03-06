@@ -1,7 +1,8 @@
 {
+  "homepage": "https://henry-n.github.io/ReminderApp/",
   "name": "reminderpro",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "moment": "^2.21.0",
     "npm": "^5.7.1",
@@ -14,9 +15,14 @@
     "sfcookies": "^1.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
